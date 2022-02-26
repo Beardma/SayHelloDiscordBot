@@ -16,4 +16,13 @@
     <PackageReference Include="NLog" Version="4.7.14" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
