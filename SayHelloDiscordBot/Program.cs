@@ -4,15 +4,16 @@ using System.Configuration;
 using NLog;
 public class Program
 {
-    private Discord.WebSocket.DiscordSocketClient _client;
-    private Logger _log;
+    private Discord.WebSocket.DiscordSocketClient? _client;
     public static Task Main(string[] args) => new Program().MainAsync();
 
     public async Task MainAsync()
     {
         _client = new DiscordSocketClient();
 
-        Logger log = LogManager.GetCurrentClassLogger();
+        Logger log= LogManager.GetCurrentClassLogger();
+        log.Debug("hi");
+        
         //  You can assign your bot token to a string, and pass that in to connect.
         //  This is, however, insecure, particularly if you plan to have your code hosted in a public repository.
         var token = "token";
