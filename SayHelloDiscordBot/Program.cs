@@ -9,10 +9,14 @@ public class Program
 
     public async Task MainAsync()
     {
-        _client = new DiscordSocketClient();
+        var set = ConfigurationManager.AppSettings["setting1"];
+        var set2 = ConfigurationManager.AppSettings["setting2"];
+        Console.WriteLine($"{set} {set2}");
 
-        Logger log= LogManager.GetCurrentClassLogger();
+        Logger log = LogManager.GetCurrentClassLogger();
         log.Debug("hi");
+
+        _client = new DiscordSocketClient();
         
         //  You can assign your bot token to a string, and pass that in to connect.
         //  This is, however, insecure, particularly if you plan to have your code hosted in a public repository.
